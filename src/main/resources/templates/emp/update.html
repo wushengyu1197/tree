@@ -44,13 +44,13 @@
 
 	<!--顶部导航区域-->
 	<body>
-	<div th:replace="~{commons/commans::topbar}"></div>
+	<div th:replace="~{commons/commons::topbar}"></div>
 
 
 		<div class="container-fluid">
 			<div class="row">
 				<!--传递参数给组件-->
-				<div th:replace="~{commons/commans::sidebar(active='list.html')}"></div>
+				<div th:replace="~{commons/commons::sidebar(active='list.html')}"></div>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					<form th:action="@{/updateEmp}" method="post">

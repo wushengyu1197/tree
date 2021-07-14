@@ -16,7 +16,7 @@ public class MyLocalResolver implements LocaleResolver {
         String language= httpServletRequest.getParameter("1");
         System.out.println("Debug==>"+language);
 
-        Locale locale=Locale.getDefault();
+        Locale locale=Locale.getDefault();//没有就使用默认的
         //如果请求的链接携带了国际化的参数
         if(!StringUtils.isEmpty(language)){
             //zh_CN

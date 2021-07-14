@@ -60,4 +60,10 @@ public class EmployeeController {
         employeeDao.sava(employee);
         return "redirect:/emps";
     }
+    //删除员工
+    @GetMapping("/delemp/{id}")
+    public String deleteEmp(@PathVariable("id") int id){
+        employeeDao.delete(id);
+        return "redirect:/emps";
+    }
 }

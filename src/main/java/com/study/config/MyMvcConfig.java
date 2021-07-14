@@ -29,7 +29,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        //addPathPatterns("/**")所有请求都连接
+        //addPathPatterns("/**")所有请求都不连接
         registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
                 .excludePathPatterns("/index.html","/","/user/login","/css/**","/js/**","/img/**");
     }
